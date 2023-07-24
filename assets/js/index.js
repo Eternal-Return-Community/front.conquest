@@ -7,7 +7,7 @@ window.onload = async () => {
 
 const setHeader = (table) => {
   const headerRow = document.createElement('tr');
-  const headers = ['Ranking', 'Name', 'Games', 'Elo', 'Region'];
+  const headers = ['Ranking', 'Name', 'Games', 'Elo', 'MMR', 'Region'];
 
   headers.forEach((headerText) => {
     const header = document.createElement('th');
@@ -37,6 +37,7 @@ const ranking = async () => {
         <td>${e.nickname}</td>
         <td>${e.games}</td>
         <td>${e.elo}</td>
+        <td>${e.mmr}</td>
         <td>${e.region}</td>
       `;
       table.querySelector('tbody').appendChild(newRow);
