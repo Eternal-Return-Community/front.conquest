@@ -22,7 +22,7 @@ const setHeader = (table) => {
 
 const ranking = async () => {
   try {
-    const response = await fetch('http://localhost/v1/list');
+    const response = await fetch('https://erbs-conquest.onrender.com/v1/list');
     const { result } = await response.json();
 
     createTables(result);
